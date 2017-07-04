@@ -1,0 +1,12 @@
+<h1>Task Controller</h1>
+
+<% @tasks.each do |task| %>
+  <h2><%= task.id %></h2>
+  <p><%= task.name %></p>
+
+<%= link_to "Delete", task_path(task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+<% end %>
+
+
